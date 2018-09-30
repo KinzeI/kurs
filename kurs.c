@@ -14,7 +14,18 @@ int main(void){
 	DDRA = 0x00; //кнопки
 	DDRB = 0xff; //лампы
 	PORTB = 0x00; //отключаем все лампы
-	check();
+	while(1){
+		check();
+		PORTB = 0x00;
+		_delay_ms(1000);
+		if(win){
+			continue;
+		} else {
+			break;
+		}
+	}
+	lose();
+	return 0;
 }
 
 int check(void){
@@ -36,5 +47,13 @@ int check(void){
 			timer--;
 		}
 	}
-	return false;
+	return 0;
+}
+int lose(void){
+	while(1){
+		PORTB = 0xff;
+		_delay_ms(500);
+		PORTB = 0x00;
+		_delay_ms(500);
+	}
 }
