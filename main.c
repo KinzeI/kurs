@@ -46,9 +46,9 @@ int main (void) {
 //------------------------------------
 int check (void) {
 	int timer = 100;
-	for (i; i < 7; i++) {
+	for (i; i < 8; i++) {
 		PORTB = lamps[j][i];
-		
+
 		while (timer) {
 			_delay_ms(10);
 			if (PINA) {
@@ -58,7 +58,7 @@ int check (void) {
 				} else {
 					win = true;
 					i++;
-					if (i == 6) {
+					if (i == 8) {
 						j++;
 						if (j == 3) {
 							j = 0;
