@@ -48,7 +48,7 @@ int check (void) {
 	int timer = 100;
 	for (; i < 8; i++) {
 		PORTB = lamps[j][i];
-		
+
 		while (timer) {
 			_delay_ms(10);
 			if (PINA) {
