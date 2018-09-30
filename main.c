@@ -46,7 +46,7 @@ int main (void) {
 //------------------------------------
 int check (void) {
 	int timer = 100;
-	for (i; i < 7; i++) {
+	for (; i < 7; i++) {
 		PORTB = lamps[j][i];
 		
 		while (timer) {
